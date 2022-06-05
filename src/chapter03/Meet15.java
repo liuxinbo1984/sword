@@ -4,14 +4,14 @@ import common.Utils;
 import java.util.LinkedList;
 import java.util.List;
 
-// 双指针法：字符串中的变位词
+// 双指针法：字符串中所有的变位词
 public class Meet15 {
 
     public static void main(String[] args) {
         Utils.printSingleList(findAngrams("cbadabacg", "abc"));
     }
 
-    public static List<Integer> findAngrams(String s1, String s2) {
+    private static List<Integer> findAngrams(String s1, String s2) {
         List<Integer> indices = new LinkedList<>();
         if (s1.length() < s2.length()) {
             return indices;
