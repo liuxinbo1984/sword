@@ -1,6 +1,7 @@
 package chapter04;
 
-public class LinkedList {
+// 反转链表
+public class Meet24 {
     public static void main(String[] args) {
         int[] arr = new int[]{7, 8, 4, 5, 6};
         ListNode head = null;
@@ -37,21 +38,6 @@ public class LinkedList {
             node = node.next;
         }
         node.next = newNode;
-        return dummy.next;
-    }
-
-    public static ListNode delete(ListNode head, int value) {
-        ListNode dummy = new ListNode(0);
-        dummy.next = head;
-
-        ListNode node = dummy;
-        while (node.next != null) {
-            if (node.next.val == value) {
-                node.next = node.next.next;
-                break;
-            }
-            node = node.next;
-        }
         return dummy.next;
     }
 
